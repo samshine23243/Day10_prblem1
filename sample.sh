@@ -23,5 +23,9 @@ result_dict[c+a/b]=$result3
 result_dict[a%b+c]=$result4
 echo ${result_dict[@]}
 
-
-
+count=1
+for i in ${result_dict[@]}
+do
+	arr[$count]=$i
+	count=$(($count+1))
+done
