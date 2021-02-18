@@ -29,3 +29,17 @@ do
 	arr[$count]=$i
 	count=$(($count+1))
 done
+
+for ((i=1;i<=4;i++))
+do
+	for ((j=i+1;j<=4;j++))
+	do
+		if [ ${arr[i]} -gt ${arr[j]} ]
+		then
+			temp=${arr[$i]}
+			arr[$i]=${arr[$j]}
+			arr[$j]=$temp
+		fi
+	done
+done
+echo "sort in ascending order:" ${arr[@]}
