@@ -12,3 +12,6 @@ echo "valuee for a*b+c:" $result2
 
 result3=$(($c+$a/$b))
 echo "value for c+a/b:" $result3
+
+result4=$(($a%$b+$c))
+echo "value for a%b+c:" $result4
