@@ -43,3 +43,20 @@ do
 	done
 done
 echo "sort in ascending order:" ${arr[@]}
+
+
+for ((i=1;i<=4;i++))
+do
+	for ((j=i+1;j<=4;j++))
+	do
+		if [ ${arr[i]} -lt ${arr[j]} ]
+		then
+			temp=${arr[$i]}
+         arr[$i]=${arr[$j]}
+         arr[$j]=$temp
+      fi
+   done
+done
+echo "sort in descending order:" ${arr[@]}
+
+
